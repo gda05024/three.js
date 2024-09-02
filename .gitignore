@@ -1,0 +1,9 @@
+
+.env*
+.env.keys
+.flaskenv*
+!.env.project
+!.env.vault
+.DS_Store
+.node_modules
+node_modules
