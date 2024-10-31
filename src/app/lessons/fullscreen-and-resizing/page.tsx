@@ -1,5 +1,5 @@
 "use client";
-import gsap from "gsap";
+
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
@@ -34,17 +34,6 @@ function Page() {
     // Camera
     const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height);
 
-    // const aspectRatio = sizes.width / sizes.height;
-    // const camera = new THREE.OrthographicCamera(
-    //   -1 * aspectRatio,
-    //   1 * aspectRatio,
-    //   1,
-    //   -1,
-    //   0.1,
-    //   100
-    // );
-    // camera.position.x = 3;
-    // camera.position.y = 3;
     camera.position.z = 3;
     camera.lookAt(mesh.position);
 
@@ -58,46 +47,13 @@ function Page() {
 
     let requestId: number;
 
-    // Animation
-    // let time = Date.now();
-
-    // Clock
-    const clock = new THREE.Clock();
-
     const controls = new OrbitControls(camera, el!.current);
     controls.enableDamping = true;
-    // if (el.current) {
-    // }
 
     function tick() {
       controls.update();
 
-      // Clock
-      const eslapsedTime = clock.getElapsedTime();
-      // mesh.rotation.y = eslapsedTime * (Math.PI * 2);
-
-      // Time
-      // const currentTime = Date.now();
-      // const deltaTime = currentTime - time;
-      // time = currentTime;
-
-      // Update Objects
-      // mesh.rotation.y += 0.002 * deltaTime;
-      // mesh.rotation.y = eslapsedTime * (Math.PI * 2);
-      // camera.position.y = Math.sin(eslapsedTime);
-      // camera.position.x = Math.cos(eslapsedTime);
-
-      // Camera
-      // camera.position.x = cursor.x * 3;
-      // camera.position.y = cursor.y * 3;
-      // camera.lookAt(mesh.position);
-
-      // camera.position.x = Math.sin(cursor.x * Math.PI * 2) * 3;
-      // camera.position.z = Math.cos(cursor.x * Math.PI * 2) * 3;
-      // camera.position.y = cursor.y * 3;
       camera.lookAt(mesh.position);
-
-      // Controls
 
       // Render
       renderer.render(scene, camera);
@@ -115,12 +71,43 @@ function Page() {
       cursor.y = -(event.clientY / sizes.height - 0.5);
     });
 
+    window.addEventListener("resize", () => {
+      sizes.width = window.innerWidth;
+      sizes.height = window.innerHeight;
+
+      camera.aspect = sizes.width / sizes.height;
+      camera.updateProjectionMatrix();
+
+      renderer.setSize(sizes.width, sizes.height);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    });
+
+    window.addEventListener("dblclick", () => {
+      const fullscreenElement = document.fullscreenElement;
+
+      if (!el.current) return;
+
+      if (!fullscreenElement) {
+        if (el.current.requestFullscreen) {
+          el.current.requestFullscreen();
+        }
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        }
+      }
+    });
+
     tick();
 
     return () => {
       cancelAnimationFrame(requestId);
+      scene.remove(mesh);
+      geometry.dispose();
+      material.dispose();
+      renderer.dispose();
     };
-  }, []);
+  });
 
   return <canvas style={{ display: "block" }} ref={el}></canvas>;
 }
