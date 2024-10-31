@@ -65,7 +65,7 @@ function Page() {
 
     cubeTweaks.add(material, "wireframe");
 
-    cubeTweaks.addColor(debugObject.current, "color").onChange((value) => {
+    cubeTweaks.addColor(debugObject.current, "color").onChange((value:any) => {
       material.color.set(value);
     });
 
