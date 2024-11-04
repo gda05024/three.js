@@ -46,6 +46,9 @@ export default function Home() {
       <li>
         <Link href="/lessons/shadow">16. shadow</Link>
       </li>
+      <li>
+        <Link href="/lessons/HauntedHouse">17. Haunted House</Link>
+      </li>
     </ul>
   );
 }
