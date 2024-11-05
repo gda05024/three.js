@@ -18,13 +18,6 @@ const HauntedHouse = () => {
         // Scene
         const scene = new THREE.Scene()
 
-        // House
-        const sphere = new THREE.Mesh(
-            new THREE.SphereGeometry(1, 32, 32),
-            new THREE.MeshStandardMaterial({ roughness: 0.7 })
-        )
-        scene.add(sphere)
-
         // Lights
         const ambientLight = new THREE.AmbientLight('#86cdff', 0.275)
         scene.add(ambientLight)
@@ -52,6 +45,28 @@ const HauntedHouse = () => {
          * Textures
          */
          const textureLoader = new THREE.TextureLoader();
+
+         // Ghost texture
+        const ghostTexture = textureLoader.load(
+          new URL('./assets/haunted-house/ghost/pp.png', import.meta.url).href
+        )
+        ghostTexture.center.set(0.5, 0.5)
+        ghostTexture.offset.set(0.75, 0.05) 
+        ghostTexture.repeat.set(3, 3)
+        ghostTexture.wrapS = THREE.ClampToEdgeWrapping
+        ghostTexture.wrapT = THREE.ClampToEdgeWrapping
+
+        // House
+        const sphere = new THREE.Mesh(
+          new THREE.SphereGeometry(1.2, 32, 32),
+            new THREE.MeshStandardMaterial({ 
+              map: ghostTexture,
+              transparent: true, 
+              roughness: 0.7,
+              side: THREE.DoubleSide
+          })
+        )
+        scene.add(sphere)
 
          // Floor
          const floorAlphaTexture = textureLoader.load(
@@ -400,6 +415,8 @@ const HauntedHouse = () => {
             ghost3.position.z = Math.sin(ghost3Angle) * 6
             ghost3.position.y = Math.sin(ghost3Angle) * Math.sin(ghost3Angle * 2.34) * Math.sin(ghost3Angle * 3.45)
               
+            // Sphere billboard effect
+            sphere.lookAt(camera.position)
 
             timer.update()
             controls.update()
