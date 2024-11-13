@@ -49,6 +49,9 @@ export default function Home() {
       <li>
         <Link href="/lessons/HauntedHouse">17. Haunted House</Link>
       </li>
+      <li>
+        <Link href="/lessons/particles">18. particles</Link>
+      </li>
     </ul>
   );
 }
