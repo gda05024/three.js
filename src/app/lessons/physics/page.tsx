@@ -222,8 +222,9 @@ function Page() {
         // Render
         renderer.render(scene, camera);
 
+        // @ts-ignore
         // Call tick again on the next frame
-        window.requestAnimationFrame(tick);
+        requestId = window?.requestAnimationFrame(tick);
       };
 
       tick();

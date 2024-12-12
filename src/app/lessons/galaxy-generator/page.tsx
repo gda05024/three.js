@@ -100,7 +100,7 @@ export default function GalaxyGenerator() {
     };
 
     // 여러 레이어의 배경 별들 생성
-    const backgroundStarsLayers = [];
+    const backgroundStarsLayers: THREE.Points[] = [];   
     for (let i = 0; i < 3; i++) {
       backgroundStarsLayers.push(createBackgroundStars());
     }
