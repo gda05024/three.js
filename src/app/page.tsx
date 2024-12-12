@@ -52,6 +52,22 @@ export default function Home() {
       <li>
         <Link href="/lessons/particles">18. particles</Link>
       </li>
+      <li>
+        <Link href="/lessons/myGLBModel">19. MyGLBModel</Link>
+      </li>
+      <li>
+        <Link href="/lessons/galaxy-generator">20. Galaxy Generator</Link>
+      </li>
+      <li>
+        <Link href="/lessons/scroll-based-animation">
+          21. Scroll-based animation
+        </Link>
+      </li>
+      <li>
+        <Link href="/lessons/physics">
+          22. physics
+        </Link>
+      </li>
     </ul>
   );
 }
