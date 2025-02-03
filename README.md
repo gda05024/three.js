@@ -15,19 +15,22 @@
 설치 방법
 저장소를 클론합니다:
 
-Clone the repository
+1 .Clone the repository
 ```
-git clone https://github.com/yourusername/three-js-project.git
+git clone https://github.com/gda05024/three.js.git
 ```
 
+2. Navigate to the project directory
 ```
 cd three-js-project
 ```
 
+3. Install dependencies
 ```
 npm install
 ```
 
+4. Start the development server
 ```
 npm start
 ```
