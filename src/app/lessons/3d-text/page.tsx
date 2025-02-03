@@ -44,9 +44,9 @@ function Page() {
         });
 
         // Text
-        const textGeometry = new TextGeometry('스무스하게~', {
+        const textGeometry = new TextGeometry('Congratulations on your resignation, Sabina!', {
           font: font,
-          size: 0.5,
+          size: 1,
           height: 0.2,
           curveSegments: 12,
           bevelEnabled: false,
@@ -67,9 +67,9 @@ function Page() {
         for (let i = 0; i < 60; i++) {
           const torus = new THREE.Mesh(geometry, material);
 
-          torus.position.x = (Math.random() - 0.5) * 20;
-          torus.position.y = (Math.random() - 0.5) * 20;
-          torus.position.z = (Math.random() - 0.5) * 20;
+          torus.position.x = (Math.random() - 0.5) * 30;
+          torus.position.y = (Math.random() - 0.5) * 30;
+          torus.position.z = (Math.random() - 0.5) * 30;
 
           torus.rotation.x = Math.random() * Math.PI;
           torus.rotation.y = Math.random() * Math.PI;

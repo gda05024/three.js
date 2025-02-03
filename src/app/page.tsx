@@ -68,6 +68,31 @@ export default function Home() {
           22. physics
         </Link>
       </li>
+      <li>
+        <Link href="/lessons/imported-models">23. imported-models</Link>
+      </li>
+      <li>
+        <Link href="/lessons/raycaster-and-mouse-event">
+          24. raycaster-and-mouse-event
+        </Link>
+      </li>
+      <li>
+        <Link href="/lessons/environment-maps">25. environment-maps</Link>
+      </li>
+      <li>
+        <Link href="/lessons/realistic-render">26. realistic-render</Link>
+      </li>
+      <li>
+        <Link href="/lessons/fiber">
+          27. fiber
+        </Link>
+      </li>
+      <li>
+        <Link href="/lessons/drei">28. drei</Link>
+      </li>
+      <li>
+        <Link href="/lessons/environment">29. environment</Link>
+      </li>
     </ul>
   );
 }

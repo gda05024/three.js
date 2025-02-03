@@ -3,20 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3333",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@types/three": "^0.161.2",
+    "@react-three/drei": "^9.121.3",
+    "@react-three/fiber": "^8.17.10",
+    "@types/three": "^0.171.0",
     "cannon": "^0.6.2",
     "gsap": "^3.12.5",
+    "leva": "^0.9.35",
     "lil-gui": "^0.19.2",
     "next": "14.1.0",
+    "r3f-perf": "7.2",
     "react": "^18",
     "react-dom": "^18",
-    "three": "^0.161.0"
+    "three": "^0.171.0"
   },
   "devDependencies": {
     "@types/node": "^20",
