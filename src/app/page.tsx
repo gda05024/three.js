@@ -5,93 +5,89 @@ export default function Home() {
     <ul>
       <li>
         <Link href="/lessons/first-threejs-project">
-          03. lessons/first-threejs-project
+          01. First Three.js Project
         </Link>
       </li>
       <li>
-        <Link href="/lessons/transform-objects">04. transform-objects</Link>
+        <Link href="/lessons/transform-objects">02. Transform Objects</Link>
       </li>
       <li>
-        <Link href="/lessons/animation">05. Animation</Link>
+        <Link href="/lessons/animation">03. Animation</Link>
       </li>
       <li>
-        <Link href="/lessons/camera">06. Camera</Link>
+        <Link href="/lessons/camera">04. Camera</Link>
       </li>
       <li>
         <Link href="/lessons/fullscreen-and-resizing">
-          07. Fullscreen and resizing
+          05. Fullscreen and Resizing
         </Link>
       </li>
       <li>
-        <Link href="/lessons/vector">08. vector</Link>
+        <Link href="/lessons/vector">06. Vector</Link>
       </li>
       <li>
-        <Link href="/lessons/geometry">09. geometry</Link>
+        <Link href="/lessons/geometry">07. Geometry</Link>
       </li>
       <li>
-        <Link href="/lessons/debug-ui">10. debug-ui</Link>
+        <Link href="/lessons/debug-ui">08. Debug UI</Link>
       </li>
       <li>
-        <Link href="/lessons/textures">12. textures</Link>
+        <Link href="/lessons/textures">09. Textures</Link>
       </li>
       <li>
-        <Link href="/lessons/material">13. material</Link>
+        <Link href="/lessons/material">10. Material</Link>
       </li>
       <li>
-        <Link href="/lessons/3d-text">14. 3d-text</Link>
+        <Link href="/lessons/3d-text">11. 3D Text</Link>
       </li>
       <li>
-        <Link href="/lessons/Light">15. Light</Link>
+        <Link href="/lessons/Light">12. Light</Link>
       </li>
       <li>
-        <Link href="/lessons/shadow">16. shadow</Link>
+        <Link href="/lessons/shadow">13. Shadow</Link>
       </li>
       <li>
-        <Link href="/lessons/HauntedHouse">17. Haunted House</Link>
+        <Link href="/lessons/HauntedHouse">14. Haunted House</Link>
       </li>
       <li>
-        <Link href="/lessons/particles">18. particles</Link>
+        <Link href="/lessons/particles">15. Particles</Link>
       </li>
       <li>
-        <Link href="/lessons/myGLBModel">19. MyGLBModel</Link>
+        <Link href="/lessons/myGLBModel">16. GLB Model</Link>
       </li>
       <li>
-        <Link href="/lessons/galaxy-generator">20. Galaxy Generator</Link>
+        <Link href="/lessons/galaxy-generator">17. Galaxy Generator</Link>
       </li>
       <li>
         <Link href="/lessons/scroll-based-animation">
-          21. Scroll-based animation
+          18. Scroll-based Animation
         </Link>
       </li>
       <li>
-        <Link href="/lessons/physics">
-          22. physics
-        </Link>
+        <Link href="/lessons/physics">19. Physics</Link>
       </li>
       <li>
-        <Link href="/lessons/imported-models">23. imported-models</Link>
+        <Link href="/lessons/imported-models">20. Imported Models</Link>
       </li>
       <li>
         <Link href="/lessons/raycaster-and-mouse-event">
-          24. raycaster-and-mouse-event
+          21. Raycaster and Mouse Events
         </Link>
       </li>
       <li>
-        <Link href="/lessons/environment-maps">25. environment-maps</Link>
+        <Link href="/lessons/environment-maps">22. Environment Maps</Link>
       </li>
       <li>
-        <Link href="/lessons/realistic-render">26. realistic-render</Link>
+        <Link href="/lessons/realistic-render">23. Realistic Render</Link>
       </li>
       <li>
-        <Link href="/lessons/fiber">
-          27. fiber
-        </Link>
+        <Link href="/lessons/fiber">24. React Three Fiber</Link>
       </li>
       <li>
-        <Link href="/lessons/drei">28. drei</Link>
+        <Link href="/lessons/drei">25. React Three Drei</Link>
       </li>
       <li>
-        <Link href="/lessons/environment">29. environment</Link>
+        <Link href="/lessons/environment">26. Environment</Link>
       </li>
     </ul>
   );
