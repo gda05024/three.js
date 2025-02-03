@@ -15,6 +15,7 @@ export default function Experience() {
   const cube = useRef();
   const sphere = useRef();
 
+  // @ts-ignore
   const { position, perfVisible } = useControls({
     position:
     {
@@ -40,10 +41,12 @@ export default function Experience() {
         scale={100}
         fixed
       >
+        {/* @ts-ignore */}
         <mesh ref={sphere} position={[position.x, position.y, 0]} scale={2}>
           <sphereGeometry />
           <meshStandardMaterial color="orange" />
           <Html
+            // @ts-ignore
             occlude={[sphere, cube]}
             distanceFactor={8}
             center
@@ -56,13 +59,15 @@ export default function Experience() {
       </PivotControls>
 
       <Float speed={50}>
+        {/* @ts-ignore */}
         <mesh ref={cube} position-x={2} scale={1.5}>
           <boxGeometry />
           <meshStandardMaterial color="mediumpurple" />
         </mesh>
       </Float>
+      {/* @ts-ignore */}
       <TransformControls object={cube} />
-
+      {/* @ts-ignore */}
       <mesh ref={sphere} position-y={-1} rotation-x={-Math.PI * 0.5} scale={10}>
         <planeGeometry />
         {/* <meshStandardMaterial color="greenyellow" /> */}

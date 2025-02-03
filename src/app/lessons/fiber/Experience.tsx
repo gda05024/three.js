@@ -13,23 +13,26 @@ export default function Experience() {
   const { camera, gl } = useThree();
 
   useFrame((state, delta) => {
+    // @ts-ignore
     cubeRef.current.rotation.y += delta;
+        // @ts-ignore
      groupRef.current.rotation.y += delta
   });
 
   return (
     <>
-      
-    <orbitControls args={ [ camera, gl.domElement ] } />
+      {/* @ts-ignore */}
+      <orbitControls args={[camera, gl.domElement]} />
       <directionalLight position={[1, 2, 3]} intensity={4.5} />
       <ambientLight intensity={1.5} />
+      {/* @ts-ignore */}
       <group ref={groupRef}>
         <mesh position-x={-2}>
           <sphereGeometry />
           <meshStandardMaterial color="orange" />
         </mesh>
-
         <mesh
+          // @ts-ignore
           ref={cubeRef}
           rotation-y={Math.PI * 0.25}
           position-x={2}

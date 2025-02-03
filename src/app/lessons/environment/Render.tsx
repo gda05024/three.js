@@ -5,7 +5,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 
 extend({ OrbitControls: OrbitControls });
 
-import CustomObject from "./CustomObject";
+import CustomObject from "../fiber/CustomObject";
 
 function Render() {
   const cubeRef = useRef<THREE.Mesh>(null);
