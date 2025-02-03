@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Three.js 프로젝트
+이 프로젝트는 Three.js를 사용하여 웹에서 3D 그래픽을 구현하는 방법을 보여줍니다. 인터랙티브한 씬과 애니메이션을 통해 3D 경험을 브라우저에서 즐길 수 있습니다.
+
+## 주요 기능
+* 인터랙티브 3D 씬: 실시간으로 렌더링되는 3D 환경을 탐색할 수 있습니다.
+* 커스터마이즈 가능한 기하학: 큐브, 구체 등 다양한 3D 형상을 만들고 조작할 수 있습니다.
+* 부드러운 애니메이션: 3D 세계 안에서 원활한 전환과 움직임을 제공합니다.
+* 사용자 상호작용: 클릭하고 드래그하여 씬을 회전시키고 확대/축소할 수 있습니다.
+
 
 ## Getting Started
+필수 조건
+이 프로젝트를 로컬에서 실행하려면 Node.js가 설치되어 있어야 합니다.
 
-First, run the development server:
+설치 방법
+저장소를 클론합니다:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Clone the repository
+```
+git clone https://github.com/yourusername/three-js-project.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```
+cd three-js-project
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
+npm start
+```
