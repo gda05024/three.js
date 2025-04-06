@@ -89,6 +89,18 @@ export default function Home() {
       <li>
         <Link href="/lessons/environment">26. Environment</Link>
       </li>
+      <li>
+        <Link href="/lessons/load-model">27. Loading Models</Link>
+      </li>
+      <li>
+        <Link href="/lessons/3d-text-r3f">28. 3D Text with R3F</Link>
+      </li>
+      <li>
+        <Link href="/lessons/portal-scene-with-r3f">29. 3D Text with R3F</Link>
+      </li>
+      <li>
+        <Link href="/lessons/Post-Processing">30. Post Processing</Link>
+      </li>
     </ul>
   );
 }
